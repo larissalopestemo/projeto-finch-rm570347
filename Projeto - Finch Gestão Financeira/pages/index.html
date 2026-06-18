@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Finch - Tela de Login</title>
+
+  <!-- Tailwind CSS -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+  >
+
+  <!-- Fontes padrões -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="antialiased">
+  <main class="pagina-login min-h-screen flex items-center justify-center" aria-label="Tela de login da Finch">
+    <div class="conteudo-pagina grid grid-cols-1 md:grid-cols-2 w-full">
+
+      <!-- Seção da hero - apesar da minha tela mostrar o login do lado esquerdo e a Hero do lado direito, escrevi essa sessão primeiro pois, semanticamente, o H1 presente na seção hero, é mais importante que o H2, que está na seção do login -->
+
+      <section class="secao-hero w-full flex" aria-labelledby="titulo-principal">
+        <div class="conteudo-hero w-full">
+
+          <div class="logo-hero flex justify-center">
+            <img
+              src="../images/finch.png"
+              alt="Finch - Gestão Financeira Inteligente"
+            >
+          </div>
+
+          <h1 id="titulo-principal" class="hero">
+            Suas finanças,<br>
+            <span class="destaque">sob controle.</span>
+          </h1>
+
+          <div class="complemento-hero w-full">
+            <p class="subtitulo-hero">
+              Conecte sua conta e acompanhe tudo em um só lugar:<br>
+              metas, gastos, reservas e organização financeira.
+            </p>
+
+            <a href="#" class="btn-conheca flex items-center justify-center">
+              Conheça as soluções!
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Seção de login -->
+
+      <section class="secao-login w-full flex" aria-labelledby="titulo-login">
+        <div class="container-login w-full flex flex-col">
+
+          <div class="logo-login-mobile flex justify-center">
+            <img
+              src="../images/finch.png"
+              alt="Finch - Gestão Financeira Inteligente"
+            >
+          </div>
+
+          <header class="cabecalho-login text-center">
+            <p class="texto-destaque">
+              Acesse sua conta
+            </p>
+
+            <h2 id="titulo-login" class="titulo-login">
+              Bem-vindo
+              <span class="destaque">de volta.</span>
+            </h2>
+
+            <p class="texto-login">
+              Entre para acompanhar suas finanças com praticidade e segurança.
+            </p>
+          </header>
+
+          <form class="formulario-login w-full" action="#" method="post">
+            <div class="campo-formulario">
+              <label class="rotulo-campo" for="email">
+                E-mail
+              </label>
+
+              <input
+                class="w-full"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="usuario@gmail.com"
+                autocomplete="email"
+              >
+            </div>
+
+            <div class="campo-formulario">
+              <label class="rotulo-campo" for="senha">
+                Senha
+              </label>
+
+              <input
+                class="w-full"
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="••••••••"
+                autocomplete="current-password"
+              >
+            </div>
+
+            <button class="btn-login w-full" type="submit">
+              Entrar
+            </button>
+          </form>
+
+          <div class="links-login text-center">
+            <a href="#" class="link-recuperar">
+              Esqueceu sua senha?
+            </a>
+          </div>
+
+          <div class="divisor-login flex items-center" aria-hidden="true">
+            Faça login com:
+          </div>
+
+          <div class="login-redes-sociais flex justify-center">
+
+            <a href="#" class="botao-social google flex items-center justify-center" aria-label="Entrar com Google">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+            </a>
+
+            <a href="#" class="botao-social linkedin flex items-center justify-center" aria-label="Entrar com LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#0A66C2" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.1 20.45H3.54V9H7.1v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+              </svg>
+            </a>
+
+            <a href="#" class="botao-social facebook flex items-center justify-center" aria-label="Entrar com Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+
+          </div>
+
+          <footer class="cadastro-login text-center">
+            <p>
+              Ainda não tem uma conta?
+              <a href="#">Se inscreva agora!</a>
+            </p>
+          </footer>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>
