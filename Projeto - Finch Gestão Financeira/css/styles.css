@@ -16,7 +16,8 @@
   --linha-suave: rgba(26, 32, 96, 0.11);
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -56,7 +57,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "login hero";
-  column-gap: 80px;
+  column-gap: 64px;
   justify-content: center;
   align-items: start;
 }
@@ -242,7 +243,8 @@ body {
   letter-spacing: 0.06em;
 }
 
-.divisor-login::before, .divisor-login::after {
+.divisor-login::before,
+.divisor-login::after {
   content: "";
   flex: 1;
   height: 1px;
@@ -279,7 +281,9 @@ body {
   height: 20px;
 }
 
-.google, .linkedin, .facebook {
+.google,
+.linkedin,
+.facebook {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,7 +302,7 @@ body {
   text-decoration: none;
 }
 
-/* Lado do hero */
+/* Hero */
 
 .secao-hero {
   width: 100%;
@@ -380,7 +384,7 @@ body {
     0 8px 28px rgba(26, 32, 96, 0.06);
 }
 
-/* Responsividade */
+/* Altura reduzida ou zoom alto */
 
 @media (max-height: 760px) {
   body {
@@ -397,6 +401,8 @@ body {
   }
 }
 
+/* Responsividade */
+
 @media (max-width: 900px) {
   body {
     overflow-y: auto;
@@ -406,62 +412,34 @@ body {
     height: auto;
     min-height: 100vh;
     overflow-y: auto;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
   }
 
   .conteudo-pagina {
-    width: min(100%, 520px);
+    width: min(100%, 430px);
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "hero"
-      "login"
-      "complemento";
+    grid-template-areas: "login";
     column-gap: 0;
-    row-gap: 26px;
+    row-gap: 0;
+    justify-content: center;
+    align-items: center;
   }
 
-  .secao-hero, .conteudo-hero {
-    display: contents;
+  .secao-hero {
+    display: none;
   }
 
   .secao-login {
     grid-area: login;
+    width: 100%;
     justify-content: center;
   }
 
-  .logo-hero {
-    display: none;
-  }
-
-  .hero {
-    grid-area: hero;
-    max-width: 440px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: clamp(38px, 8vw, 54px);
-  }
-
-  .complemento-hero {
-    grid-area: complemento;
-    width: 100%;
-    text-align: center;
-  }
-
-  .subtitulo-hero {
-    max-width: 440px;
-    margin: 0 auto 18px;
-    font-size: clamp(13px, 3.5vw, 14px);
-    line-height: 1.35;
-  }
-
-  .btn-conheca {
-    width: min(100%, 250px);
-    max-width: 100%;
-    min-width: 0;
-    min-height: 42px;
-    margin: 0 auto;
-    font-size: 14px;
+  .container-login {
+    max-width: 430px;
+    padding: 24px 28px 22px;
   }
 
   .logo-login-mobile {
@@ -475,11 +453,6 @@ body {
     height: 58px;
     width: auto;
     display: block;
-  }
-
-  .container-login {
-    max-width: 430px;
-    padding: 24px 28px 22px;
   }
 
   .cabecalho-login {
@@ -526,36 +499,5 @@ body {
   .cadastro-login {
     margin-top: 9px;
     font-size: 12px;
-  }
-}
-
-@media (max-width: 520px) {
-  .pagina-login {
-    padding: 12px;
-  }
-
-  .conteudo-pagina {
-    row-gap: 16px;
-  }
-
-  .container-login {
-    padding: 22px 20px 20px;
-  }
-
-  .titulo-login {
-    font-size: 26px;
-  }
-
-  .texto-login {
-    display: none;
-  }
-
-  .login-redes-sociais {
-    gap: 8px;
-  }
-
-  .btn-conheca {
-    width: 100%;
-    min-width: auto;
   }
 }
